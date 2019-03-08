@@ -1,16 +1,26 @@
 var nice = ['Ardit',"Olti","Elta","Adniti","Yllka",'Magrib','Altina']
 
 $('#nice').click(function nice() {
-	if ($('#input1').val() != '' &&
-		$('#input2').val() != '' &&
-		$('#input3').val() != '' &&
-		$('#input4').val() != '' &&
-		$('#input5').val() != '' &&
-		$('#input6').val() != '' &&
-		$('#input7').val() != ''
-	) {
+	if (check()) {
 		alert('nice')
 	} else{
 		alert('complete all')
 	}
-}) 
+})
+
+var temp1;
+function check(){
+	var temp1 = 0;
+	for (var i = nice.length; i >= 1; i--) {
+		if ($('#input' + i).val() != '') {
+			if (parseInt($('#input' + i).val()) == NaN) {
+				
+			}
+		}
+	}
+	if (temp1 == nice.length) {
+		return true
+	} else{
+		return false
+	}
+}
