@@ -1,0 +1,19 @@
+body{
+	margin: 0px 50px 0px 50px;
+}
+
+#main{
+	display: flex;
+	flex-direction: row;
+}
+
+.blocks{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#clone{
+	display: none;
+}
