@@ -1,9 +1,13 @@
 body{
 	margin: 0px 50px 0px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 #main{
-	padding-top: 50px;
+	padding-top: 100px;
 	display: flex;
 	flex-direction: row;
 }
@@ -62,4 +66,12 @@ body{
 	align-items: center;
 	flex-direction: column;
 	padding: 0px 10px 0px 10px;
+}
+
+#nice{
+	display: none;
+}
+
+#turnDiv{
+	margin-top: 100px;
 }

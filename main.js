@@ -35,10 +35,10 @@ $('#nice').click(function nice() {
 			}
 		}
 		turn++;
-		$('#turn').text(userList[turn])
+		$('#turn').text(userList[turn] + "'s"+ ' turn:')
 		$("#input"+turn).parent().hide();
 		$("#input"+(turn-1)).parent().show();
-		alert('nice')
+		alert('nice')	
 		if (turn == userList.length) {
 			$('#turn').hide();
 			$('#nice').hide();
@@ -106,7 +106,7 @@ $('body').keypress(function(event){
 
 $('#add').keypress(function(event){
 	var keycode = (event.keyCode ? event.keyCode : event.which);
-	if (keycode == '13' && f == 0) {
+	if (keycode == '13' && f == 0 && $('#add').val()!= "") {
 		var tempUser = $('#add').val();
 		userList.push($('#add').val())
 		userListN[tempUser] = 0;
@@ -114,6 +114,11 @@ $('#add').keypress(function(event){
 		if (userList.length == 1) {
 			$('#turn').text(userList[num] + "'s"+ ' turn:')
 			$("#input"+turn).parent().hide();
+		}
+		if(userList.length <= 2){
+			$('#nice').hide()
+		}else{
+			$("#nice").show()
 		}
 	}
 });
@@ -137,10 +142,10 @@ var numEnd = 0;
 function calculateEnd(){
 	for (var i = userList.length - 1; i >= 0; i--) {
 		tempC1 = userListN[userList[i]];
-		tempC2 = userList.length*100;
+		tempC2 = Math.floor(userList.length*100);
 		tempC3 = ((tempC1/tempC2)*100).toString();
-		$("#cloneEnd").clone(true).appendTo( "#main" ).attr("id", numEnd+"end").find("#name").text(tempC3)
-		$(numEnd+"end").find("#name").text(tempC3)
+		$("#cloneEnd").clone(true).appendTo( "#main" ).attr("id", numEnd+"end").find("#name").text(userList[i])
+		$("#" + numEnd+"end").find("#value").text(tempC3)
 		numEnd++
 	}
 }
