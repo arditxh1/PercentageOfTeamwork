@@ -3,6 +3,7 @@ body{
 }
 
 #main{
+	padding-top: 50px;
 	display: flex;
 	flex-direction: row;
 }
@@ -16,4 +17,49 @@ body{
 
 #clone{
 	display: none;
+}
+
+#cloneEnd{
+	display: none;
+}
+
+#add{
+	width: 800px;
+	height: 50px;
+	background-color: white;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 4px 4px 15px 0px;
+
+}
+
+#add[type=text]{
+	font-family: 'Lato', sans-serif;
+	padding-left: 20px;
+	font-size: 25px;
+	letter-spacing: 2px;
+}
+
+::placeholder{
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	letter-spacing: 2px;
+}
+
+#Div_Input{
+	margin-top: -100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: -100;
+	transition: 1s;
+}
+
+.blocksEnd{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0px 10px 0px 10px;
 }
