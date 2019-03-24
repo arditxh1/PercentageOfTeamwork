@@ -13,6 +13,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	overflow-x: hidden;
 
 }
 
@@ -60,11 +61,19 @@ body{
 	letter-spacing: 1px;
 }
 
-::placeholder{
+.input::placeholder{
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 25px;
 	letter-spacing: 1px;
 	color: white;
+	opacity: 0.5 !important;
+}
+
+.add::placeholder{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 25px;
+	letter-spacing: 1px;
+	color: gray;
 	opacity: 0.5 !important;
 }
 
@@ -78,11 +87,16 @@ body{
 	transition: 1s;
 }
 
+.blocksEnd h1{
+	color: #4c4c4c;
+	font-family: 'Ubuntu', sans-serif;
+}
+
 .blocksEnd{
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	flex-direction: column;
+	flex-direction: row;
 	padding: 0px 10px 0px 10px;
 }
 
@@ -138,4 +152,71 @@ body{
 	font-weight: 100;
 	margin: 10px 0px 10px 0px;
 	font-family: 'Ubuntu', sans-serif;
+}
+
+#alertInfo{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 2em;
+}
+
+#turn{
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 1.3em;
+	color: white;
+}
+
+#entry{
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	transition: .3s;
+}
+#entry h1{
+	font-size: 3em;
+}
+
+#entry p{
+	font-weight: 100;
+	color: #e6e6e6;
+}
+
+#mainImg{
+	width: 30%;
+	height: 30%;
+	transition: 2s;
+}
+
+#textEntry{
+	transition: 2s;
+	text-align: center;
+	padding-right: 100px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	width: 35%;
+	font-family: 'Ubuntu', sans-serif;
+	align-items: center;
+	justify-content: center;
+}
+
+#start{
+    padding: 6pt 20pt;
+    line-height: 1.7;
+    border: 1px solid #06d19c;
+    color: #fff;
+    font-weight: 400;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-bottom: 1.3em;
+    margin-top: 1.3em;
+    text-align: center;
+    text-decoration: none;
+    background-color: #06d19c;
+    width: 30%;
+}
+
+#myChart{
+	display: none;
 }

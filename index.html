@@ -4,24 +4,52 @@
 	<title>Percentage Of Teamwork</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+	   <SCRIPT language=Javascript>
+      <!--
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+         return true;
+      }
+      //-->
+   </SCRIPT>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 </head>
 <body>
 	<div>
-		<div id="Div_Input"><input type="text" placeholder="Enter a title for this card…" id="add"></div>
+		<div id="Div_Input"><input type="text" placeholder="Enter a group member" id="add"></div>
 	</div>
 	<div id="turnDiv"><h1 id="turn"></h1></div>
 	<div id="main">
 		<div class="blocks" id="clone">
 			<h1 id="name" class="names">Olti</h1>
-			<input type="text" id="input" class="input" placeholder="Enter the %">
+			<input type="text" id="input" class="input" placeholder="Enter the %" onkeypress="return isNumberKey(event)">
 		</div>
 		<div class="blocksEnd" id="cloneEnd">
 			<h1 id="name"></h1>
 			<h1 id="value"></h1>
 		</div>
 	</div>
-	<button id="nice" class="color">Done</button>
+
+	<div id="ex1" class="modal">
+	  <p id="alertInfo">Thanks for clicking. That felt good.</p>
+	  <canvas id="myChart"></canvas>	
+	</div>
+	<div id="entry">
+		<img src="main.svg" id="mainImg">
+		<div id="textEntry">		
+			<h1>The best way to calculate the Percentage Of Teamwork</h1>
+			<p>This website is about calculating the % of teamwork. Every group member has 100% and will divide that to all the other members and in the end, we will find % how much does the group think each individual member worked.</p>
+			<button id="start">Press Enter</button>
+		</div>
+	</div>
+	<button id="nice" class="color">Start</button>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 	<script src='main.js'"></script>
 </body>
 </html>
