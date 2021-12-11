@@ -21,6 +21,7 @@ body{
 	padding-top: 100px;
 	display: flex;
 	flex-direction: row;
+	display: none;
 }
 
 .blocks{
@@ -122,6 +123,7 @@ body{
 
 #turnDiv{
 	margin-top: 100px;
+	display: none;
 }
 
 .input{
