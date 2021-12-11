@@ -195,6 +195,8 @@ $('#ex1').on('fadeOut', function(){
 
 
 function hideEntry(){
+	$("#main").show();
+	$("#turnDiv").show();
 	$('#entry').fadeOut(2000);
 	$('#mainImg').css('transform', 'translate(-730px, 0px)');
 	$('#textEntry').css('transform', 'translate(920px, 0px)');
